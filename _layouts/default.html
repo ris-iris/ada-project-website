@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>W3.CSS Template</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="icon" type="image/png"  href="assets/img/favicon.png">
+<title>{{ site.title | default: site.github.repository_name }} by {{ site.github.owner_name }}</title>
+<link rel="stylesheet" href="{{ '/assets/css/styles.css?v=' | append: site.github.build_revision | relative_url }}">
+<meta name="viewport" content="width=device-width">
 <style>
 body {font-family: "Times New Roman", Georgia, Serif;}
 h1, h2, h3, h4, h5, h6 {
