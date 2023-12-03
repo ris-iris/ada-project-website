@@ -1,7 +1,7 @@
 theme: jekyll-theme-minimal
 title: Cinematic Archetypes: Decoding Societal Preferences
-description: DataStory 
+description: DataStory
 show_downloads: True
 navigation:
-  - title: DataStory
+  - title: Home
     url: /
