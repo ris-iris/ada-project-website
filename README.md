@@ -10,7 +10,7 @@ To do so, we use Latent Dirichlet allocation, a model, that allows us to interpr
 And some examples of characters with particular archtype:
 
 | Character|                                         Film     |Archetype(cluster)|
-|__________|__________________________________________________|__________________|
+|----------|--------------------------------------------------|------------------|
 |Dumbledore|Harry Potter and the Goblet of Fire, Harry Potter and the Half-Blood Prince|13|
 |   Gandalf|             The Lord of the Rings: The Two Towers|                13|
 |   Gandalf| The Lord of the Rings: The Fellowship of the Ring|                25|
