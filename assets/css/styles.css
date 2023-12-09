@@ -201,7 +201,9 @@ slider_container {
       }
 
 slider {
-  width: 100%;
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
 }
 @media print, screen and (max-width: 960px) {
 
