@@ -1,5 +1,8 @@
-<div class="slider">
-<input type="range" min="1" max="50" value="1" id="sliderRange">
+<div class="slider_container">
+  <div class="slider">
+    <input type="range" min="1" max="50" value="1" id="sliderRange">
+  </div>
+<p id="clusterNumber"></p>
 <img src="assets/img/clusters/cluster_0.png" id="img">
 
 <script>
@@ -9,6 +12,7 @@ var rangeslider = document.getElementById("sliderRange");
   rangeslider.addEventListener('input', function() {
     var counter = Number(this.value) - 1;
     document.getElementById('img').src = "assets/img/clusters/cluster_" + counter.toString() + ".png"
+    document.getElementById("clusterNumber").innerHTML = "Cluster number " + this.value.toString();
   });
 
 });
