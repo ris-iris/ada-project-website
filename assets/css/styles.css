@@ -190,6 +190,15 @@ footer {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
+slider {
+        width: 500px;
+        height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        text-align: center;
+        overflow: hidden;
+      }
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
