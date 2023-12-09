@@ -8,6 +8,7 @@ To do so, we use Latent Dirichlet allocation, a model, that allows us to interpr
 {% include_relative assets/js/cluster_slider.html %}
 
 And some examples of characters with particular archtype:
+
 | Character|                                         Film     |Archetype(cluster)|
 |__________|__________________________________________________|__________________|
 |Dumbledore|Harry Potter and the Goblet of Fire, Harry Potter and the Half-Blood Prince|13|
