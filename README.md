@@ -4,21 +4,8 @@ In our daily lives, we naturally categorize everything we encounter, including t
 We were given the plots of the movies. Let's cluster characters based on their attributes and actions that they did or was done to them.
 
 ```html
-
 <input type="range" min="1" max="50" value="1", id="sliderRange">
 <img src="assets/img/background.png" id="img">
-        <script>
-window.addEventListener('load', function() {
-var rangeslider = document.getElementById("sliderRange");
-
-  rangeslider.addEventListener('input', function() {
-    var counter = Number(this.value) - 1;
-    document.getElementById('img').src = "assets/img/clusters/cluster_" + counter.toString() + ".png"
-  });
-
-});
-        </script>
-
 ```
 
 ## Historical trends
