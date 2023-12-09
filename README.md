@@ -3,6 +3,7 @@ In our daily lives, we naturally categorize everything we encounter, including t
 ## Characters clustering
 We were given the plots of the movies. Let's cluster characters based on their attributes and actions that they did or was done to them.
 
+```html
  <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Zm9yZXN0fGVufDB8fDB8&auto=format&fit=crop&w=600&q=60" id="img">
         <script>
             var counter = 0;
@@ -20,6 +21,7 @@ else
 } 
 }
         </script>
+```
 
 ## Historical trends
 What are the prevailing archtypes trough the history.
