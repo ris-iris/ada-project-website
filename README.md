@@ -9,15 +9,15 @@ To do so, we use Latent Dirichlet allocation, a model, that allows us to interpr
 
 And some examples of characters with particular archtype:
 
-| Character|                                         Film     |Archetype(cluster)|
-|----------|--------------------------------------------------|------------------|
-|Dumbledore|~~Harry Potter and the Goblet of Fire, Harry Potter and the Half-Blood Prince|~~13|
-|   Gandalf|             The Lord of the Rings: The Two Towers|              ~~13|
-|   Gandalf| The Lord of the Rings: The Fellowship of the Ring|              ~~25|
-|     Harry|     Harry Potter and the Deathly Hallows – Part 2|              ~~25|
-|    Gollum|     The Lord of the Rings: The Return of the King|              ~~39|
-| Voldemort|         Harry Potter and the Order of the Phoenix|              ~~46|
-| Bellatrix|          Harry Potter and the Half-Blood Prince  |              ~~46|
+| Character |                                         Film     |Archetype(cluster)|
+|-----------|--------------------------------------------------|------------------|
+|Dumbledore |  Harry Potter and the Goblet of Fire, Harry Potter and the Half-Blood Prince|  13|
+|   Gandalf |             The Lord of the Rings: The Two Towers|                13|
+|   Gandalf | The Lord of the Rings: The Fellowship of the Ring|                25|
+|     Harry |     Harry Potter and the Deathly Hallows – Part 2|                25|
+|    Gollum |     The Lord of the Rings: The Return of the King|                39|
+| Voldemort |         Harry Potter and the Order of the Phoenix|                46|
+| Bellatrix |          Harry Potter and the Half-Blood Prince  |                46|
 
 We can see, that the clusters obtained with our method group characters with the similar roles in their movies (sometimes this leads to one character being in different clussters, e.g. having a different role in different parts of the story).
 
