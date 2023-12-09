@@ -1,0 +1,13 @@
+<input type="range" min="1" max="50" value="1", id="sliderRange">
+<img src="assets/img/background.png" id="img">
+        <script>
+window.addEventListener('load', function() {
+var rangeslider = document.getElementById("sliderRange");
+
+  rangeslider.addEventListener('input', function() {
+    var counter = Number(this.value) - 1;
+    document.getElementById('img').src = "assets/img/clusters/cluster_" + counter.toString() + ".png"
+  });
+
+});
+        </script>
