@@ -46,7 +46,7 @@ Ok, we learn our differences and similarities, but can we predict the success of
 ## Actors success
 The same goes for actors - we know that it is possible to become famous by playing in the first or secondary roles, villains or good-natured people, strong-willed leaders or decent citizens, but who has *statistically* more chances?
 
-# Measurement of success
+<h1> Measurement of success</h1>
 We were conflicted about how to measure the success of the actors, whether to use their average ratings or normalized revenue. By plotting the histogram chart between the two metric and calculating the Pearson correlation coefficient, we noticed certain correlation between the average ratings and normalized revenue. In order to measure the success of an actor, we decided to combine both metrics and use the sum of normalized log revenue and rating of the film as the metric for success.
 
 ![Alt Text](assets/img/ActorSuccess/histogram1.png)
@@ -57,11 +57,11 @@ Firstly, actors were assigned varying levels of importance based on their roles 
 
 ![Alt text](assets/img/ActorSuccess/topactors.png)
 
-# Does the number of architypes lead to an actor’s success?
+<h1> Does the number of architypes lead to an actor’s success? </h1>
 We are now interested in determining if the number of architypes acted by the actors contributed to their success. We took the number of clusters of the actors and divided it by the number of films they have acted in, which gives us the clusters to film ratio. According to our analysis, the median is 0.8, which suggests that taking a more diverse role may lead to the actor’s success.
 
 ![Alt text](assets/img/ActorSuccess/clusttofilmratio.png)
-<h1 align="center"> Histogram chart for cluster to film ration
+<p align="center"> Histogram chart for cluster to film ration</p>
 
 Further analysis was conducted to determine if the claim of taking a more diverse role in may lead to the actor’s success is true. We consider an actor who assumes many archetypes to have a cluster-to-film ratio exceeding 0.7. We set the treatment group as actors who take on many architypes and the control group as actors who take on less architypes.
 
