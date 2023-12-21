@@ -61,6 +61,7 @@ Firstly, actors were assigned varying levels of importance based on their roles 
 We are now interested in determining if the number of architypes acted by the actors contributed to their success. We took the number of clusters of the actors and divided it by the number of films they have acted in, which gives us the clusters to film ratio. According to our analysis, the median is 0.8, which suggests that taking a more diverse role may lead to the actor’s success.
 
 ![Alt text](assets/img/ActorSuccess/clusttofilmratio.png)
+<h1 align="center"> Histogram chart for cluster to film ration
 
 Further analysis was conducted to determine if the claim of taking a more diverse role in may lead to the actor’s success is true. We consider an actor who assumes many archetypes to have a cluster-to-film ratio exceeding 0.7. We set the treatment group as actors who take on many architypes and the control group as actors who take on less architypes.
 
