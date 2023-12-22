@@ -5,7 +5,6 @@ We hope everyone will discover something interesting here: movie historians will
 
 Still not interested? Give us a chance by looking at the visuals and allow us to entertain you for the next couple of minutes.
 
-
 ## Characters clustering
 Clustering is a crucial step in our analysis. 
  We follow the idea suggested in the paper [Learning Latent Personas of Film Characters](https://developer.imdb.com/non-commercial-datasets/) to extract information about character archetypes from the plot text. We implement two methods: Latent Dirichlet Allocation (LDA)-based and BERT-based clustering.
@@ -26,8 +25,6 @@ We compared our clustering methods with those proposed in the paper. Our methods
 After that, we fix the clustering algorithm and search for the best number of clusters for our later analysis using the Within-Cluster Sum of Squares: 
 
 ![Alt Text](assets/img/num_clusters/scoring_50.png)
-
-
 
 As a result, we derived 50 archetypes. You can look at the topics with the highest probabilities for each archetype:
 
@@ -74,7 +71,14 @@ Presently, we are unable to fully assert that the distribution of archetypes var
 
 Observing the plot developments throughout the 20th century, a discernible shift is intriguingly noted: a transformation from a more achieving to communicating protagonists.
 
+##  Movie success
+Now that we have explored both differences and similarities, is it possible to predict the success of the movies based on the characters who are involved?
+We are interested to determine if the architypes do play a significant role in the success of the movie. By analyzing the log revenue distribution, we can construct a linear model to identify the most significant archetypes by examining the coefficients and p-values. 
 
+First, we will take a look at the number of movies with revenue data and also log revenue histogram. In this part of analysis, we simply use revenue data for measuring success.
+
+The effect of the interactions between the architypes and its effects to the movie success was studied. We compare the impact of archetype interactions on movie success by evaluating two models—one with interaction terms and one without. This allows us to analyze if the interaction term contributes to explaining the variability of the movie success. Subsequently, we fitted a linear regression model to both models to examine the relationships. R-squared metric was 0.093 for the model without interaction terms and 0.261 for the model with interaction tems.Those values are small and we cannot predict the success from arechetypes themselves but we can say that interactions between archetypes is important for movie success considering the fact R-squared metric increased a lot.
+ 
 
 ## Actors success
 The same goes for actors - we know that it is possible to become famous by playing in the first or secondary roles, villains or good-natured people, strong-willed leaders or decent citizens, but who has *statistically* more chances?
@@ -112,17 +116,4 @@ According to the chart on success distribution comparison, the results we obtain
 
 \
 ![Alt text](assets/img/ActorSuccess/successdistribution.png)
-
-##  Movie success
-Now that we have explored both differences and similarities, is it possible to predict the success of the movies based on the characters who are involved?
-We are interested to determine if the architypes do play a significant role in the success of the movie. By analyzing the log revenue distribution, we can construct a linear model to identify the most significant archetypes by examining the coefficients and p-values. 
-
-First, we will take a look at the number of movies with revenue data and also log revenue histogram. In this part of analysis, we simply use revenue data for measuring success.
-
-
-
-
-The effect of the interactions between the architypes and its effects to the movie success was studied. We compare the impact of archetype interactions on movie success by evaluating two models—one with interaction terms and one without. This allows us to analyze if the interaction term contributes to explaining the variability of the movie success. Subsequently, we fitted a linear regression model to both models to examine the relationships. R-squared metric was 0.093 for the model without interaction terms and 0.261 for the model with interaction tems.We can say that interactions between archetypes is important for movie success.
- Now let's look at p-values and coefficents to find out important archetypes and interactions.
-
 
