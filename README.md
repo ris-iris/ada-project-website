@@ -86,7 +86,7 @@ The same goes for actors - we know that it is possible to become famous by playi
 <h3> Measurement of success</h3>
 We were conflicted about how to measure the success of the actors, whether to use their average ratings or normalized revenue. By plotting the histogram chart between the two metric and calculating the Pearson correlation coefficient, we noticed certain correlation between the average ratings and normalized revenue. In order to measure the success of an actor, we decided to combine both metrics and use the sum of normalized log revenue and rating of the film as the metric for success.
 
-\
+
 
 ![Alt Text](assets/img/MovieSuccess/MovieStatsRR.jpg)
 
