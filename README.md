@@ -49,13 +49,13 @@ To prove our clustering works, let's do an experiment with history. Our world is
 
 History plays a significant role in various aspects, and this extends to the movie industry. Interestingly, the sequence of events from World War and the Great Depression does not seem to have a pronounced impact on the film-making industry. In fact, the war caused a slight decrease in the number of movies released, while the financial crisis resulted in a slight increase. According to the plot, there is limited data available before the 1930s and after 2012, and we will exclude these periods from our study.
 
-![Alt Text](assets/img/History/NumberReleaseMovies.png)
+<img src="assets/img/History/NumberReleaseMovies.png" width="700">
 
 We've chosen to analyze trends during periods of consistently abundant data, excluding movies from before 1932 and the last two years (2013-2014). In our further analysis, we prioritize clusters based on relative popularity or shifts in popularity. However, it's important to note that this selection is influenced by years with limited data, leading to inflated proportions for each cluster. As a result, early clusters may appear more significant than they truly are. For example, when dealing with only a handful of movies, the archetype distribution may not be particularly interesting. Hence, we utilize the filtered subset not just for plotting but also for ranking the clusters.
 
 We first extract the top archetypes across the years and then perform normalization on these archetypes. The top archetypes were determined based on both the highest sum of normalized frequency (indicating popularity) and the largest range in normalized frequency (reflecting changes in popularity). When selecting the top 5 archetypes these selection methods proved to be the same. We then plot the top five archetypes with a sliding average with a 10-year window size.
 
-![Alt Text](assets/img/History/NormCharacCluster.png)
+<img src="assets/img/History/NormCharacCluster.png" width="700">
 
 By analyzing the top 5 architypes, we observe that the three most popular archetypes represent various types of protagonists and their close allies. Additionally, there has been a significant loss in interest in cluster 10 after 1976.
 
@@ -64,6 +64,8 @@ Next, we analyzed the largest range in normalized frequency. We observed that th
 
 ## Cultural preferences
 Hollywood stands as the central hub and Mecca of the film industry. Although various countries create films with a primary focus on their local audience, delving into these productions adds an extra layer of interest. To either prove or refute stereotypes, we examine cultures from a different perspective and assess our archetypes based on the country of film production.
+
+<img src="assets/img/CulturalPref/topmovieprod.png" width="740">
 
 Several countries contribute to the film industry, and our focus is exclusively on the leading countries in film production. We've determined the top 10 countries based on character count and plotted their standing in film production through a chart. 
 
