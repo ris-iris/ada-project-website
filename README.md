@@ -25,7 +25,7 @@ We compared our clustering methods with those proposed in the paper. Our methods
 
 After that, we fix the clustering algorithm and search for the best number of clusters for our later analysis using Within-Cluster Sum of Squares: GRAPH.
 
-{% include_relative assets/js/num_cluster_slider.html %}
+{% include_relative assets/js/num_clusters_slider.html %}
 
 
 As a result, we derived 50 archetypes. You can look at the topics with the highest probabilities for each archetype:
