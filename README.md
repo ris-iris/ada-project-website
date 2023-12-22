@@ -49,19 +49,17 @@ To prove our clustering works, let's do an experiment with history. Our world is
 
 History plays a significant role in various aspects, and this extends to the movie industry. Interestingly, the sequence of events from World War and the Great Depression does not seem to have a pronounced impact on the film-making industry. In fact, the war caused a slight decrease in the number of movies released, while the financial crisis resulted in a slight increase. According to the plot, there is limited data available before the 1930s and after 2012, and we will exclude these periods from our study.
 
-![Alt Text](assets/img/History/DiffNormChracCluster.png)
+![Alt Text](assets/img/History/NumberReleaseMovies.png)
 
 We've chosen to analyze trends during periods of consistently abundant data, excluding movies from before 1932 and the last two years (2013-2014). In our further analysis, we prioritize clusters based on relative popularity or shifts in popularity. However, it's important to note that this selection is influenced by years with limited data, leading to inflated proportions for each cluster. As a result, early clusters may appear more significant than they truly are. For example, when dealing with only a handful of movies, the archetype distribution may not be particularly interesting. Hence, we utilize the filtered subset not just for plotting but also for ranking the clusters.
 
-We first extract the top archetypes across the years and then perform normalization on these archetypes. The top archetypes were determined based on both the highest sum of normalized frequency (indicating popularity) and the largest range in normalized frequency (reflecting changes in popularity). We then plot the top five archetypes with an average taken over a 5-year period.
+We first extract the top archetypes across the years and then perform normalization on these archetypes. The top archetypes were determined based on both the highest sum of normalized frequency (indicating popularity) and the largest range in normalized frequency (reflecting changes in popularity). When selecting the top 5 archetypes these selection methods proved to be the same. We then plot the top five archetypes with a sliding average with a 10-year window size.
 
-![Alt Text](assets/img/History/NormCharacCuster.png)
+![Alt Text](assets/img/History/NormCharacCluster.png)
 
 By analyzing the top 5 architypes, we observe that the three most popular archetypes represent various types of protagonists and their close allies. Additionally, there has been a significant loss in interest in cluster 10 after 1976.
 
 Next, we analyzed the largest range in normalized frequency. We observed that the most significant changes in popularity occur among the side characters.
-
-![Alt Text](assets/img/History/DiffNormCharacCuster.png)
 
 
 ## Cultural preferences
