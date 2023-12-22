@@ -43,7 +43,7 @@ Ok, we learn our differences and similarities, but can we predict the success of
 
 Here we simply measrue the succuss of the movie by log revenue.
 Here is the historigiam chart of lof revenue.
-![Alt Text](assets/img/MovieSuccess/logrevenue.png)
+![Alt Text](assets/img/MovieSuccess/log_revenue.png)
 
 
 
