@@ -41,6 +41,10 @@ To prove or refute stereotypes, to look at cultures from a different angle - we 
 ##  Movie success
 Ok, we learn our differences and similarities, but can we predict the success of the movie based on the scenario and more specifically on the characters who are involved?
 
+Here we simply measrue the succuss of the movie by log revenue.
+Here is the historigiam chart of lof revenue.
+![Alt Text](assets/img/MovieSuccess/logrevenue.png)
+
 
 
 ## Actors success
