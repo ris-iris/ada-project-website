@@ -7,27 +7,9 @@ Still not interested? Give us a chance by looking at the visuals and allow us to
 
 
 ## Characters clustering
- Clustering is a crucial step in our analysis. 
- We follow the idea suggested in the paper [Learning Latent Personas of Film Characters](https://developer.imdb.com/non-commercial-datasets/) to extract information about character archetypes from the plot text. We implement two methods: Latent Dirichlet Allocation (LDA)-based and BERT-based clustering.
+We were given the plots of the movies. Let's cluster characters based on their attributes and actions that they did or was done to them.
 
-Latent Dirichlet Allocation-based clustering:
-- extract linguistic features for each character using `spacy`
-- use word2vec embeddings to cluster these features into topics using Agglomerative Clustering,
-- perform Latent Dirichlet Allocation to cluster characters based on their feature topics.
-  
-BERT-based clustering:
-- obtain the character's embedding from the pre-trained BERT model
-- perform clustering (Agglomerative or KMeans) using these embeddings.
-
-So the LDA method firstly extract linguistic features and then find word2vec embeddings for them as soon as BERT-based clustering directly obtain character's embedding. Thus, LDA is more explainable method because we know the attributes for every cluster
-
-
-We compared our clustering methods with those proposed in the paper. Our methods performed better based on the Variation of Information between learned clusters and between gold clusters extracted from TV Tropes. As the BERT-based method didn't significantly outperform the LDA-based one, we chose LDA for our analysis due to its speed advantage and explainability.
-
-After that, we fix the clustering algorithm and search for the best number of clusters for our later analysis using Within-Cluster Sum of Squares: GRAPH.
-
-
-As a result, we derived 50 archetypes. You can look at the topics with the highest probabilities for each archetype:
+To do so, we use Latent Dirichlet allocation, a model, that allows us to interpret the resulting clusters of characters based on the topics of their attributes and actions. You can look at the topics with the highest probabilities for each archetype:
 
 {% include_relative assets/js/cluster_slider.html %}
 
@@ -46,14 +28,29 @@ And some examples of characters with particular archetypes:
 We can see, that the clusters obtained with our method group characters with similar roles in their movies (sometimes this leads to one character being in different clusters, e.g. having a different role in different parts of the story).
 
 ## Historical trends
-To prove our clustering works, let's experiment with a history. Our world is constantly changing, but do our favourite characters?``
+To prove our clustering works, let's experiment with a history. Our world is constantly changing, but do our favourite characters?
 
 Take a look at the past to find what people used to like and compare to what they like now.
 
 ## Cultural preferences
-The main place of the film industry, its Mecca is Hollywood. Other countries make films aimed mostly at local audiences. But it’s all the more interesting to look at them!
+Hollywood stands as the central hub and Mecca of the film industry. Although various countries create films with a primary focus on their local audience, delving into these productions adds an extra layer of interest. To either prove or refute stereotypes, we examine cultures from a different perspective and assess our archetypes based on the country of film production.
 
-To prove or refute stereotypes, to look at cultures from a different angle - we consider our archetypes depending on the country of the film production.
+Several countries contribute to the film industry, and our focus is exclusively on the leading countries in film production. We've determined the top 10 countries based on character count and plotted their standing in film production through a chart. 
+
+![Alt Text](assets/img/CulturalPref/CharcountCountriesPlot.png)
+<p align="center"> Total Character Count by Country</p>
+
+The chart indicates that character count is notably higher for American films. To standardize the data, we conduct normalization. Subsequently, we will analyze the distribution of the top five global archetypes.
+
+![Alt Text](assets/img/CulturalPref/TopCountries21Cent.png)
+
+The distribution of the top 5 clusters in top 10 countries in the 21st century brings about notable differences between the countries. There are observable trends or patterns in the types of characters that are popular as protagonists in movies from different cultural contexts or countries. For example, there are comparable differences in India and Hong Kong compared to the United Kingdom and Spain. In the first group, protagonists are portrayed as proactive, taking decisive actions, and accomplishing significant goals or feats. While in the second group, protagonists are portrayed as traveling, suggesting themes of exploration, cultural exchange, or transformative journeys.
+
+Presently, we are unable to fully assert that the distribution of archetypes varies among different countries. However, was this the case in the 20th century?
+
+![Alt Text](assets/img/CulturalPref/TopCountries20Cent.png)
+
+Observing the plot developments throughout the 20th century, a discernible shift is intriguingly noted: a transformation from a more achieving to communicating protagonists.
 
 
 ##  Movie success
@@ -65,10 +62,10 @@ We are interested to determine if the architypes do play a significant role in t
 
 The effect of the interactions between the architypes and its effects to the movie success was studied. We compare the impact of archetype interactions on movie success by evaluating two models—one with interaction terms and one without. This allows us to analyze if the interaction term contributes to explaining the variability of the movie success. Subsequently, we fitted a linear regression model to both models to examine the relationships.
 
-This is the result for linear model without interaction terms.
+<p align="center">Result for linear model without interaction terms.</p>
 ![Alt Text](assets/img/MovieSuccess/regression_result_1.png)
 
-And thisis the result with interaction terms.
+<p align="center">Result for linear model with interaction terms.</p>
 ![Alt Text](assets/img/MovieSuccess/regression_result_2.png)
 
 By comparing the R-squared metric for the two results, we can say that interactions between archetypes is important for movie success.
