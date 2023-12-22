@@ -7,9 +7,27 @@ Still not interested? Give us a chance by looking at the visuals and allow us to
 
 
 ## Characters clustering
-We were given the plots of the movies. Let's cluster characters based on their attributes and actions that they did or was done to them.
+ Clustering is a crucial step in our analysis. 
+ We follow the idea suggested in the paper [Learning Latent Personas of Film Characters](https://developer.imdb.com/non-commercial-datasets/) to extract information about character archetypes from the plot text. We implement two methods: Latent Dirichlet Allocation (LDA)-based and BERT-based clustering.
 
-To do so, we use Latent Dirichlet allocation, a model, that allows us to interpret the resulting clusters of characters based on the topics of their attributes and actions. You can look at the topics with the highest probabilities for each archetype:
+Latent Dirichlet Allocation-based clustering:
+- extract linguistic features for each character using `spacy`
+- use word2vec embeddings to cluster these features into topics using Agglomerative Clustering,
+- perform Latent Dirichlet Allocation to cluster characters based on their feature topics.
+  
+BERT-based clustering:
+- obtain the character's embedding from the pre-trained BERT model
+- perform clustering (Agglomerative or KMeans) using these embeddings.
+
+So the LDA method firstly extract linguistic features and then find word2vec embeddings for them as soon as BERT-based clustering directly obtain character's embedding. Thus, LDA is more explainable method because we know the attributes for every cluster
+
+
+We compared our clustering methods with those proposed in the paper. Our methods performed better based on the Variation of Information between learned clusters and between gold clusters extracted from TV Tropes. As the BERT-based method didn't significantly outperform the LDA-based one, we chose LDA for our analysis due to its speed advantage and explainability.
+
+After that, we fix the clustering algorithm and search for the best number of clusters for our later analysis using Within-Cluster Sum of Squares: GRAPH.
+
+
+As a result, we derived 50 archetypes. You can look at the topics with the highest probabilities for each archetype:
 
 {% include_relative assets/js/cluster_slider.html %}
 
