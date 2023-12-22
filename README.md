@@ -23,9 +23,10 @@ So the LDA method first extracts linguistic features and then finds word2vec emb
 
 We compared our clustering methods with those proposed in the paper. Our methods performed better based on the Variation of Information between learned clusters and between gold clusters extracted from TV Tropes. As the BERT-based method didn't significantly outperform the LDA-based one, we chose LDA for our analysis due to its speed advantage and explainability.
 
-After that, we fix the clustering algorithm and search for the best number of clusters for our later analysis using Within-Cluster Sum of Squares: GRAPH.
+After that, we fix the clustering algorithm and search for the best number of clusters for our later analysis using the Within-Cluster Sum of Squares: 
 
-{% include_relative assets/js/num_clusters_slider.html %}
+![Alt Text](assets/img/num_clusters/scoring_50.png)
+
 
 
 As a result, we derived 50 archetypes. You can look at the topics with the highest probabilities for each archetype:
