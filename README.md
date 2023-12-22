@@ -39,18 +39,24 @@ To prove or refute stereotypes, to look at cultures from a different angle - we 
 
 
 ##  Movie success
-Ok, we learn our differences and similarities, but can we predict the success of the movie based on the scenario and more specifically on the characters who are involved?
+Now that we have explored both differences and similarities, is it possible to predict the success of the movies based on the scenario and more specifically on the characters who are involved?
+We are interested to determine if the architypes do play a significant role in the success of the movie. By analyzing the log revenue distribution, we can construct a linear model to identify the most significant archetypes by examining the coefficients and p-values.
 
-Here we simply measrue the succuss of the movie by log revenue.
-Here is the historigiam chart of lof revenue.
 ![Alt Text](assets/img/MovieSuccess/log_revenue.png)
+![Alt Text](assets/img/MovieSuccess/MovieStatsRR.jpg)
 
+The effect of the interactions between the architypes and its effects to the movie success was studied. We compare the impact of archetype interactions on movie success by evaluating two models—one with interaction terms and one without. This allows us to analyze if the interaction term contributes to explaining the variability of the movie success. Subsequently, we fitted a linear regression model to both models to examine the relationships.
+
+![Alt Text](assets/img/MovieSuccess/regression_result_1.png)
+![Alt Text](assets/img/MovieSuccess/regression_result_2.jpg)
+
+By comparing the R-squared metric for the two results, we can say that interactions between archetypes is important for movie success.
 
 
 ## Actors success
 The same goes for actors - we know that it is possible to become famous by playing in the first or secondary roles, villains or good-natured people, strong-willed leaders or decent citizens, but who has *statistically* more chances?
 
-<h5> Measurement of success</h5>
+<h3> Measurement of success</h3>
 We were conflicted about how to measure the success of the actors, whether to use their average ratings or normalized revenue. By plotting the histogram chart between the two metric and calculating the Pearson correlation coefficient, we noticed certain correlation between the average ratings and normalized revenue. In order to measure the success of an actor, we decided to combine both metrics and use the sum of normalized log revenue and rating of the film as the metric for success.
 
 ![Alt Text](assets/img/ActorSuccess/histogram1.png)
@@ -61,7 +67,7 @@ Firstly, actors were assigned varying levels of importance based on their roles 
 
 ![Alt text](assets/img/ActorSuccess/topactors.png)
 
-<h5> Does the number of architypes lead to an actor’s success? </h5>
+<h3> Does the number of architypes lead to an actor’s success? </h3>
 We are now interested in determining if the number of architypes acted by the actors contributed to their success. We took the number of clusters of the actors and divided it by the number of films they have acted in, which gives us the clusters to film ratio. According to our analysis, the median is 0.8, which suggests that taking a more diverse role may lead to the actor’s success.
 
 ![Alt text](assets/img/ActorSuccess/clusttofilmratio.png)
