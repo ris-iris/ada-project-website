@@ -48,7 +48,7 @@ We are interested to determine if the architypes do play a significant role in t
 The effect of the interactions between the architypes and its effects to the movie success was studied. We compare the impact of archetype interactions on movie success by evaluating two models—one with interaction terms and one without. This allows us to analyze if the interaction term contributes to explaining the variability of the movie success. Subsequently, we fitted a linear regression model to both models to examine the relationships.
 
 ![Alt Text](assets/img/MovieSuccess/regression_result_1.png)
-![Alt Text](assets/img/MovieSuccess/regression_result_2.jpg)
+![Alt Text](assets/img/MovieSuccess/regression_result_2.png)
 
 By comparing the R-squared metric for the two results, we can say that interactions between archetypes is important for movie success.
 
