@@ -91,6 +91,16 @@ We are interested to determine if the architypes do play a significant role in t
 First, we will take a look at the number of movies with revenue data and also log revenue histogram. In this part of analysis, we simply use revenue data for measuring success.
 
 The effect of the interactions between the architypes and its effects to the movie success was studied. We compare the impact of archetype interactions on movie success by evaluating two models—one with interaction terms and one without. This allows us to analyze if the interaction term contributes to explaining the variability of the movie success. Subsequently, we fitted a linear regression model to both models to examine the relationships. R-squared metric was 0.093 for the model without interaction terms and 0.261 for the model with interaction tems.Those values are small and we cannot predict the success from arechetypes themselves but we can say that interactions between archetypes is important for movie success considering the fact R-squared metric increased a lot.
+Now, among those with p-values less than or equal to 0.05, the coefficients are listed in order of absolute value. We only see interaction terms for top 5 and can tell some combination are likely to change the success of movies for better or worse.
+
+|Archetype  or combination of Archetypes  |   Coefficients   |
+|-----------------------------------------|------------------|
+| archetype_22 and archetype_44           |    -4.677605     |
+| archetype_24 and archetype_37           |    -3.498758      
+| archetype_7 and archetype_25            |    3.207898      |
+| archetype_17 and archetype_18           |    -3.132014     |
+| archetype_11 and archetype_22           |    2.700693      |
+
  
 
 ## Actors success
