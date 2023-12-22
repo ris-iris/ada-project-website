@@ -56,8 +56,10 @@ Hollywood stands as the central hub and Mecca of the film industry. Although var
 
 Several countries contribute to the film industry, and our focus is exclusively on the leading countries in film production. We've determined the top 10 countries based on character count and plotted their standing in film production through a chart. 
 
+<p align="center"><strong>Total Character Count by Country</strong></p>
+
 ![Alt Text](assets/img/CulturalPref/CharcountCountriesPlot.png)
-<p align="center"> Total Character Count by Country</p>
+
 
 The chart indicates that character count is notably higher for American films. To standardize the data, we conduct normalization. Subsequently, we will analyze the distribution of the top five global archetypes.
 
@@ -81,10 +83,12 @@ We are interested to determine if the architypes do play a significant role in t
 
 The effect of the interactions between the architypes and its effects to the movie success was studied. We compare the impact of archetype interactions on movie success by evaluating two models—one with interaction terms and one without. This allows us to analyze if the interaction term contributes to explaining the variability of the movie success. Subsequently, we fitted a linear regression model to both models to examine the relationships.
 
-<p align="center">Result for linear model without interaction terms.</p>
+<p align="center"><strong>Result for linear model without interaction terms.</strong></p>
+
 ![Alt Text](assets/img/MovieSuccess/regression_result_1.png)
 
-<p align="center">Result for linear model with interaction terms.</p>
+<p align="center"><strong>Result for linear model with interaction terms.</strong></p>
+
 ![Alt Text](assets/img/MovieSuccess/regression_result_2.png)
 
 By comparing the R-squared metric for the two results, we can say that interactions between archetypes is important for movie success.
@@ -96,7 +100,11 @@ The same goes for actors - we know that it is possible to become famous by playi
 <h3> Measurement of success</h3>
 We were conflicted about how to measure the success of the actors, whether to use their average ratings or normalized revenue. By plotting the histogram chart between the two metric and calculating the Pearson correlation coefficient, we noticed certain correlation between the average ratings and normalized revenue. In order to measure the success of an actor, we decided to combine both metrics and use the sum of normalized log revenue and rating of the film as the metric for success.
 
+\
+<strong>Distribution of Normalized Log Revenue and Average Rating</strong>
+
 ![Alt Text](assets/img/ActorSuccess/histogram1.png)
+
 
 We are interested in figuring out who are the top actors that in the film industry. To assess the success of actors, we established specific criteria to determine the significance of each actor. 
 
@@ -107,8 +115,11 @@ Firstly, actors were assigned varying levels of importance based on their roles 
 <h3> Does the number of architypes lead to an actor’s success? </h3>
 We are now interested in determining if the number of architypes acted by the actors contributed to their success. We took the number of clusters of the actors and divided it by the number of films they have acted in, which gives us the clusters to film ratio. According to our analysis, the median is 0.8, which suggests that taking a more diverse role may lead to the actor’s success.
 
+\
+<p align="center"><strong>Histogram chart for cluster to film ration</strong></p>
+
 ![Alt text](assets/img/ActorSuccess/clusttofilmratio.png)
-<p align="center"> Histogram chart for cluster to film ration</p>
+
 
 Further analysis was conducted to determine if the claim of taking a more diverse role in may lead to the actor’s success is true. We consider an actor who assumes many archetypes to have a cluster-to-film ratio exceeding 0.7. We set the treatment group as actors who take on many architypes and the control group as actors who take on less architypes.
 
@@ -116,5 +127,6 @@ Propensity score matching was conducted, using the propensity score similarity t
 
 According to the chart on success distribution comparison, the results we obtained are intriguing. We can now assert that actors who have portrayed fewer archetypes are statistically significantly more successful than those who have played a greater variety of archetypes.
 
+\
 ![Alt text](assets/img/ActorSuccess/successdistribution.png)
 
