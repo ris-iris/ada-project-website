@@ -45,9 +45,24 @@ And some examples of characters with particular archetypes:
 We can see, that the clusters obtained with our method group characters with similar roles in their movies (sometimes this leads to one character being in different clusters, e.g. having a different role in different parts of the story).
 
 ## Historical trends
-To prove our clustering works, let's experiment with a history. Our world is constantly changing, but do our favourite characters?
+To prove our clustering works, let's do an experiment with history. Our world is constantly changing, but do our favorite characters?
 
-Take a look at the past to find what people used to like and compare to what they like now.
+History plays a significant role in various aspects, and this extends to the movie industry. Interestingly, the sequence of events from World War and the Great Depression does not seem to have a pronounced impact on the film-making industry. In fact, the war caused a slight decrease in the number of movies released, while the financial crisis resulted in a slight increase. According to the plot, there is limited data available before the 1930s and after 2012, and we will exclude these periods from our study.
+
+![Alt Text](assets/img/History/DiffNormChracCluster.png)
+
+We've chosen to analyze trends during periods of consistently abundant data, excluding movies from before 1932 and the last two years (2013-2014). In our further analysis, we prioritize clusters based on relative popularity or shifts in popularity. However, it's important to note that this selection is influenced by years with limited data, leading to inflated proportions for each cluster. As a result, early clusters may appear more significant than they truly are. For example, when dealing with only a handful of movies, the archetype distribution may not be particularly interesting. Hence, we utilize the filtered subset not just for plotting but also for ranking the clusters.
+
+We first extract the top archetypes across the years and then perform normalization on these archetypes. The top archetypes were determined based on both the highest sum of normalized frequency (indicating popularity) and the largest range in normalized frequency (reflecting changes in popularity). We then plot the top five archetypes with an average taken over a 5-year period.
+
+![Alt Text](assets/img/History/NormCharacCuster.png)
+
+By analyzing the top 5 architypes, we observe that the three most popular archetypes represent various types of protagonists and their close allies. Additionally, there has been a significant loss in interest in cluster 10 after 1976.
+
+Next, we analyzed the largest range in normalized frequency. We observed that the most significant changes in popularity occur among the side characters.
+
+![Alt Text](assets/img/History/DiffNormCharacCuster.png)
+
 
 ## Cultural preferences
 Hollywood stands as the central hub and Mecca of the film industry. Although various countries create films with a primary focus on their local audience, delving into these productions adds an extra layer of interest. To either prove or refute stereotypes, we examine cultures from a different perspective and assess our archetypes based on the country of film production.
