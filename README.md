@@ -75,17 +75,6 @@ Presently, we are unable to fully assert that the distribution of archetypes var
 Observing the plot developments throughout the 20th century, a discernible shift is intriguingly noted: a transformation from a more achieving to communicating protagonists.
 
 
-##  Movie success
-Now that we have explored both differences and similarities, is it possible to predict the success of the movies based on the characters who are involved?
-We are interested to determine if the architypes do play a significant role in the success of the movie. By analyzing the log revenue distribution, we can construct a linear model to identify the most significant archetypes by examining the coefficients and p-values. 
-
-First, we will take a look at the number of movies with revenue data and also log revenue histogram. In this part of analysis, we simply use revenue data for measuring success.
-
-![Alt Text](assets/img/MovieSuccess/MovieStatsRR.jpg)
-![Alt Text](assets/img/MovieSuccess/log_revenue.png)
-
-The effect of the interactions between the architypes and its effects to the movie success was studied. We compare the impact of archetype interactions on movie success by evaluating two models—one with interaction terms and one without. This allows us to analyze if the interaction term contributes to explaining the variability of the movie success. Subsequently, we fitted a linear regression model to both models to examine the relationships. R-squared metric was 0.093 for the model without interaction terms and 0.261 for the model with interaction tems.We can say that interactions between archetypes is important for movie success.
- Now let's look at p-values and coefficents to find out important archetypes and interactions.
 
 ## Actors success
 The same goes for actors - we know that it is possible to become famous by playing in the first or secondary roles, villains or good-natured people, strong-willed leaders or decent citizens, but who has *statistically* more chances?
@@ -96,6 +85,7 @@ We were conflicted about how to measure the success of the actors, whether to us
 \
 <strong>Distribution of Normalized Log Revenue and Average Rating</strong>
 
+![Alt Text](assets/img/MovieSuccess/MovieStatsRR.jpg)
 ![Alt Text](assets/img/ActorSuccess/histogram1.png)
 
 
@@ -122,4 +112,17 @@ According to the chart on success distribution comparison, the results we obtain
 
 \
 ![Alt text](assets/img/ActorSuccess/successdistribution.png)
+
+##  Movie success
+Now that we have explored both differences and similarities, is it possible to predict the success of the movies based on the characters who are involved?
+We are interested to determine if the architypes do play a significant role in the success of the movie. By analyzing the log revenue distribution, we can construct a linear model to identify the most significant archetypes by examining the coefficients and p-values. 
+
+First, we will take a look at the number of movies with revenue data and also log revenue histogram. In this part of analysis, we simply use revenue data for measuring success.
+
+
+
+
+The effect of the interactions between the architypes and its effects to the movie success was studied. We compare the impact of archetype interactions on movie success by evaluating two models—one with interaction terms and one without. This allows us to analyze if the interaction term contributes to explaining the variability of the movie success. Subsequently, we fitted a linear regression model to both models to examine the relationships. R-squared metric was 0.093 for the model without interaction terms and 0.261 for the model with interaction tems.We can say that interactions between archetypes is important for movie success.
+ Now let's look at p-values and coefficents to find out important archetypes and interactions.
+
 
